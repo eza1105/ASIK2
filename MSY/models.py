@@ -12,7 +12,7 @@ class dataikan(models.Model):
     jenis_usaha    = models.CharField(max_length=50)
     provinsi       = models.CharField(max_length=50)
     jenis_ikan     = models.CharField(max_length=50)
-    tahun          = models.IntegerField(null=True)
+    tahun          = models.FloatField(null=True)
     trip           = models.FloatField(null=True)#trip adalah ton
     ton            = models.FloatField(null=True)#dan ton adalah trip
     def CPUE (self):
@@ -21,7 +21,7 @@ class dataikan(models.Model):
 class UploadedFile(models.Model):
     name = models.CharField(null=True, max_length=100)
     file = models.FileField(upload_to='static/legenda/', validators=[FileExtensionValidator(allowed_extensions=['zip','rar'])])
-    uploaded_at = models.DateTimeField(auto_now_add=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True, null=True)
     
     def save(self, *args, **kwargs):
         self.file.name = self.name
