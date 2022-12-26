@@ -90,7 +90,7 @@ DATABASES = {
 #         "NAME": "postgres",
 #         "PORT": "5432",
 #         "USER":"postgres",
-#         "PASSWORD": "ZaVin261222Django",
+#         "PASSWORD": "ZaVin261222django",
 #     }
 
 # }
