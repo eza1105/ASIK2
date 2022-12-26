@@ -18,6 +18,7 @@ from django.urls import path, include
 from MSY.views import*
 from userview.views import*
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -42,3 +43,6 @@ urlpatterns = [
     path('upload/', file_upload, name='upload'),
     path('persebaran/', persebaran, name='persebaran')
 ]
+
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
