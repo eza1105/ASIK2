@@ -35,7 +35,7 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(next_page ='user' ), name='logout'),
 
     # KEBUTUHAN USER 
-    path("",user, name='user',  ),
+    path("user/",user, name='user'),
     path("table-MSY/", table, name='table'),
     path("chart/", chart, name= 'chart'),
     path("about/", about, name='about'),
