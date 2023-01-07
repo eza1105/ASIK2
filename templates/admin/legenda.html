@@ -29,30 +29,6 @@
             </div>
         </div>
     </div>
-    <div class="flex">
-        <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
-            <div class="w-full h-full">
-                <object data="{% static 'legenda/suhu/' %}{{name_suhu}}" type="application/pdf" width="100%" height="500">
-                    <p>Alternative text for browsers that do not support PDF.</p>
-                  </object>
-            </div>
-            <h1>Suhu</h1>
-            <a href="{% static 'legenda/suhu/' %}{{name_suhu}}"
-                class=" inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase  rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
-                download="{{name}}">Download layout</a>
-        </div>
-        <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
-            <div class="w-full h-full">
-                <object data="{% static 'legenda/krolofil/' %}{{name_krolofil}}" type="application/pdf" width="100%" height="500">
-                    <p>Alternative text for browsers that do not support PDF.</p>
-                  </object>
-            </div>
-            <h1>Suhu</h1>
-            <a href="{% static 'legenda/krolofil/' %}{{name_krolofil}}"
-                class=" inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase  rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
-                download="{{name}}">Download layout</a>
-        </div>
-    </div>
     <!--/Template Card-->
 </div>
 {% endblock %}
