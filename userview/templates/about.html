@@ -1,17 +1,26 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content%}
-<div class="bg-cream">
-    <div class="max-w-screen-xl px-8 flex">
+
+<section id="chart" class="bg-cream   py-24">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12 border-8 border-gray-500 rounded-full " style="height: 50vh;">
+        <div class="w-full">
             <center>
-                <h1 data-aos="fade-down" data-aos-once="true" class="my-4 text-xl font-bold leading-tight text-darken capitalize">
+                <h1 data-aos="fade-down" data-aos-once="true" class=" text-xl font-bold leading-tight text-darken capitalize">
                     <span> tentang pembuat <span>
                 </h1>
-                <img data-aos="fade-down" src="https://i.postimg.cc/cL5nVkh1/3135715.png" alt="Founder"><br>
-                <p data-aos="fade-up" data-aos-once="true" data-aos-delay="300" class="leading-normal text-sm mb-8 mr-16 ml-16">Nevin Adel Ramaputra dan Reza Fahrizal Barkah adalah pembuat website ini, dua Mahasiswa yang berasal dari Bandung, Jawa Barat. Berstatus sebagai mahasiswa aktif di UPI Serang.</p>	
-                <p data-aos="fade-up" data-aos-once="true" data-aos-delay="300" class="leading-normal text-sm mb-8 mr-16 ml-16">Keduanya berumur 19 Tahun dan mempunyai keahliannya masing masing dalam membuat website ini, seperti bagian style dan css dikerjakan oleh Nevin dan program dan olah data dikerjakan oleh Reza.</p>	
-                <p data-aos="fade-up" data-aos-once="true" data-aos-delay="300" class="leading-normal text-sm mb-8 mr-16 ml-16">Tujuan utama pembuatan website ini adalah untuk memberikan kemudahan dalam mencari data MSY terkait PPN di Karangantu, juga dapat menampilkan hasil yang berupa grafik dan peta persebaran ikan yang ada</p>	
+                <img data-aos="fade-down"  src="https://i.postimg.cc/cL5nVkh1/3135715.png" alt="Founder"><br>
             </center>
+        </div>
+        <div>
+            <p class="text-center">
+                Nevin Adel Ramaputra dan Reza Fahrizal Barkah, dua mahasiswa yang berasal dari Bandung, Jawa Barat, merupakan pembuat website ini. Mereka adalah mahasiswa aktif di UPI Serang dan berusia 19 tahun. <br>
+                 Masing-masing memiliki keahlian yang terkait dengan pembuatan website ini, dengan Nevin bertanggung jawab atas bagian style dan CSS, sementara Reza bertanggung jawab atas program dan pengolahan data.
+                <br> Tujuan utama pembuatan website ini adalah memberikan kemudahan bagi pengguna dalam mencari data MSY terkait PPN di Karangantu, serta menampilkan hasil yang berupa grafik dan peta persebaran ikan. <br>
+                 Selain itu, website ini juga bertujuan untuk membantu pengguna dalam mengetahui lebih lanjut tentang kondisi populasi ikan di Karangantu dan mengambil tindakan yang tepat untuk menjaga keseimbangan ekosistem laut.
+            </p>
+        </div>
+       
     </div>
-</div>
+</section>
 {% endblock %}
