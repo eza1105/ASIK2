@@ -31,8 +31,10 @@
     </div>
     <div class="flex">
         <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
-            <div>
-                <iframe src="{% static 'legenda/suhu/' %}{{name_suhu}}" width="100%" height="500"></iframe>
+            <div class="w-full h-full">
+                <object data="{% static 'legenda/suhu/' %}{{name_suhu}}" type="application/pdf" width="100%" height="500">
+                    <p>Alternative text for browsers that do not support PDF.</p>
+                  </object>
             </div>
             <h1>Suhu</h1>
             <a href="{% static 'legenda/suhu/' %}{{name_suhu}}"
@@ -41,7 +43,9 @@
         </div>
         <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
             <div>
-                <iframe src="{% static 'legenda/krolofil/' %}{{name_krolofil}}" width="100%" height="500"></iframe>
+                <object data="{% static 'legenda/krolofil/' %}{{name_krolofil}}" type="application/pdf" width="100%" height="500">
+                    <p>Alternative text for browsers that do not support PDF.</p>
+                  </object>
             </div>
             <h1>Krolofil</h1>
             <a href="{% static 'legenda/krolofil/' %}{{name_krolofil}}"
@@ -51,6 +55,5 @@
     </div>
     <!--/Template Card-->
 </div>
-
 
 {% endblock %}
