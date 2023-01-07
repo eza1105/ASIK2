@@ -46,9 +46,9 @@
         <h1 class="font-semibold text-darken text-2xl text-center ">Suhu Permukaan <span class="text-yellow-500"> Air
                 Laut</span></h1>
         <div class="border-4 border-cream">
-            <object data="{% static 'legenda/suhu/' %}{{name_suhu_layout}}#zoom=100%" type="application/pdf" width="100%" height="500px">
-                <p>It appears your browser doesn't support embedded PDFs. You can <a href="{% static 'legenda/suhu/' %}{{name_suhu_layout}}#zoom=100%">download the PDF file here</a> instead.</p>
-            </object>
+            <object data="{% static 'legenda/suhu/' %}{{name_suhu_layout}}" type="application/pdf" width="100%" height="500">
+                <p>Alternative text for browsers that do not support PDF.</p>
+              </object>
         </div>
         <h1>Suhu</h1>
         <a href="{% static 'legenda/suhu/' %}{{name_suhu_layout}}"
@@ -59,12 +59,9 @@
         <h1 class="font-semibold text-darken text-2xl text-center ">Klorofil-a /<span class="text-yellow-500">
                 (Chl-a)</span></h1>
         <div class="border-4 border-cream">
-            <object data="{% static 'legenda/krolofil/' %}{{name_krolofil_layout}}#zoom=100" type="application/pdf" width="100%"
-                height="500px">
-                <p>It appears your browser doesn't support embedded PDFs. You can <a
-                        href="{% static 'legenda/krolofil/' %}{{name_krolofil_layout}}#zoom=100">download the PDF file here</a>
-                    instead.</p>
-            </object>
+            <object data="{% static 'legenda/krolofil/' %}{{name_krolofil_layout}}" type="application/pdf" width="100%" height="500">
+                <p>Alternative text for browsers that do not support PDF.</p>
+              </object>
         </div>
         <h1>Krolofil</h1>
         <a href="{% static 'legenda/krolofil/' %}{{name_krolofil_layout}}"
