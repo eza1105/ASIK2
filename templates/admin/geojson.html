@@ -59,11 +59,11 @@
 
         // create a function to style the geojson data based on a property value
         function getColor(d) {
-            return d == 5 ? '#ff69b4':
-            d == 4 ? '#4E6C50' :
-                d == 3 ? 'red' :
-                    d == 2 ? '#A9AF7E' :
-                        d == 1 ? '#FCE700' : '#FCE700';
+            return d == 5 ? '#193870':
+            d == 4 ? '#3F69B2 ' :
+                d == 3 ? '#5680C8 ' :
+                    d == 2 ?  '#9ABFFF ' :
+                        d == 1 ? '#C1D1ED ' : '#C1D1ED ';
         }
         function style(feature) {
             return {
@@ -107,11 +107,11 @@
         legend.onAdd = function(map) {
         var div = L.DomUtil.create("div", "legend");
         div.innerHTML += "<h4>Legenda</h4>";
-        div.innerHTML += '<i style="background: #ff69b4"></i><span>d = 1</span><br>';
-        div.innerHTML += '<i style="background: #4E6C50"></i><span>d = 2</span><br>';
-        div.innerHTML += '<i style="background: #FF0000"></i><span>d = 3 </span><br>';
-        div.innerHTML += '<i style="background: #A9AF7E"></i><span>d = 4</span><br>';
-        div.innerHTML += '<i style="background: #FCE700"></i><span>d = 5</span><br>';
+        div.innerHTML += '<i style="background: #193870"></i><span>d = 1</span><br>';
+        div.innerHTML += '<i style="background: #3F69B2"></i><span>d = 2</span><br>';
+        div.innerHTML += '<i style="background: #5680C8"></i><span>d = 3 </span><br>';
+        div.innerHTML += '<i style="background: #9ABFFF"></i><span>d = 4</span><br>';
+        div.innerHTML += '<i style="background: #C1D1ED"></i><span>d = 5</span><br>';
 
         return div;
         };
