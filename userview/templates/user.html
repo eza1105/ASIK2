@@ -59,7 +59,8 @@
             <!-- congrats -->
             <div data-aos="fade-up" data-aos-delay="600" data-aos-once="true"
                 class="absolute bottom-20 md:bottom-48 lg:bottom-52 -right-6 lg:right-8 floating-4">
-                <img class="bg-white bg-opacity-80 rounded-lg  h-24 sm:h-16" src="{% static 'img/database.png' %}" alt="">
+                <img class="bg-white bg-opacity-80 rounded-lg  h-24 sm:h-16" src="{% static 'img/database.png' %}"
+                    alt="">
             </div>
         </div>
     </div>
@@ -105,7 +106,8 @@
             <p class="text-white text-3xl">🗺</p>
         </div>
         <h1 class="font-medium text-xl mb-3 lg:px-14 text-darken lg:h-14 pt-3">Peta Persebaran Ikan</h1>
-        <p class="px-4 text-gray-500">Menampilkan peta persebaran ikan yang berada di Provinsi Banten. Berdasarkan Klorofil-a dan temperature</p>
+        <p class="px-4 text-gray-500">Menampilkan peta persebaran ikan yang berada di Provinsi Banten. Berdasarkan
+            Klorofil-a dan temperature</p>
     </div>
 </div>
 
@@ -137,135 +139,173 @@
     </div>
 </div>
 
-<div class="md:flex mt-40 md:space-x-10 items-start">
-    <div data-aos="fade-down" class="ml-12 md:w-6/12 relative">
-        <div style="background: #33EFA0" class="w-32 h-32 rounded-full absolute z-0 left-4 -top-12 animate-pulse">
-        </div>
-        <div style="background: #33D9EF;" class="w-5 h-5 rounded-full absolute z-0 left-36 -top-12 animate-ping">
-        </div>
-        <img class="relative z-50 floating rounded-full w-16px h-8px " src="{% static 'img/datas.png'%}"  alt="">
-        <div style="background: #5B61EB;" class="w-36 h-36 rounded-full absolute z-0 right-16 -bottom-1 animate-pulse">
-        </div>
-        <div style="background: #F56666;" class="w-5 h-5 rounded-full absolute z-0 right-52 bottom-1 animate-ping">
-        </div>
-    </div>
 
-    <div data-aos="fade-down" class="md:w-6/12 mt-20 md:mt-0 text-gray-500">
-        <h1 class="text-2xl font-semibold text-darken lg:pr-40 text-yellow-500">Keakuratan Data <span
-                class="text-indigo-900">yang dapat digunakan</span></h1>
-        <div class="flex items-center space-x-5 my-5">
-            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-                <p class="text-yellow-500 text-2xl">★</p>
+<section id="chart" class="bg-cream   py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12 ">
+        <!-- kotak satu  -->
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink "
+            data-aos="fade-down-left" data-aos-duration="3000">
+            <div style="background: #33EFA0" class="w-32 h-32 rounded-full absolute z-0 left-4 -top-12 animate-pulse">
             </div>
-            <p>Berasal Dari Sumber Yang Dapat Di Percaya</p>
-        </div>
-        <div class="flex items-center space-x-5 my-5">
-            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-                <p class="text-yellow-500 text-2xl">★</p>
+            <div style="background: #33D9EF;" class="w-5 h-5 rounded-full absolute z-0 left-36 -top-12 animate-ping">
             </div>
-            <p>Keaslian Data dapat Terjamin</p>
-        </div>
-        <div class="flex items-center space-x-5 my-5">
-            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
-                <p class="text-yellow-500 text-2xl">★</p>
+            <div class="">
+                <img class="relative z-50 floating rounded-full w-16px h-8px " src="{% static 'img/datas.png'%}" alt="">
             </div>
-            <p>Kemudahan dalam mengakses data yang dibutuhkan</p>
+            <div>
+                <div style="background: #5B61EB;"
+                    class="w-36 h-36 rounded-full absolute z-0 right-16 -bottom-1 animate-pulse">
+                </div>
+                <div style="background: #F56666;"
+                    class="w-5 h-5 rounded-full absolute z-0 right-52 bottom-1 animate-ping">
+                </div>
+            </div>
         </div>
-        <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700"
-            class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
-            <button
-                class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
-                <a href="{% url 'table' %}">
-                    Selengkapnya
-                </a>
-            </button>
-        </div>
-    </div>
-</div>
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink  "
+            data-aos="fade-down-right" data-aos-duration="3000">
+            <div class=" p-3 h-full  border-r-8">
+                <div class=" my-8">
+                    <h1 class="text-2xl font-semibold text-darken lg:pr-40 text-yellow-500">Keakuratan Data <span
+                            class="text-indigo-900">yang dapat digunakan</span></h1>
+                    <div class="flex items-center space-x-5 my-5">
+                        <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                            <p class="text-yellow-500 text-2xl">★</p>
+                        </div>
+                        <p>Berasal Dari Sumber Yang Dapat Di Percaya</p>
+                    </div>
+                    <div class="flex items-center space-x-5 my-5">
+                        <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                            <p class="text-yellow-500 text-2xl">★</p>
+                        </div>
+                        <p>Keaslian Data dapat Terjamin</p>
+                    </div>
+                    <div class="flex items-center space-x-5 my-5">
+                        <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                            <p class="text-yellow-500 text-2xl">★</p>
+                        </div>
+                        <p>Kemudahan dalam mengakses data yang dibutuhkan</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700"
+                        class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
+                        <button
+                            class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
+                            <a href="{% url 'table' %}">
+                                Selengkapnya
+                            </a>
+                        </button>
+                    </div>
+                </div>
 
-<!-- Tools For Teachers And Learners -->
-<div class="flex justify-evenly flex-col md:flex-row items-center md:space-x-5 mt-16">
-    <div data-aos="fade-right" class="md:w-1/2 lg:pl-14">
-        <h1 class="text-darken font-semibold text-3xl lg:pr-56"><span class="text-yellow-500">Grafik </span>yang
-            Jelas dan Mudah di mengerti</h1>
-        <p class="text-gray-500 my-4 lg:pr-32">Grafik yang rinci beserta keterangannya, yang Memberikan kejelasan
-            serta kemudahan dalam mengakses dan meneliti data yang di butuhkan.</p>
-        <button
-            class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
-            <a href="{% url 'chart' %}">
-                Selengkapnya
-            </a>
-        </button>
-    </div>
-
-    <div data-aos="fade-right" data-aos-once="true" class="relative z-50 floating  md:w-6/12 p-10 mr-11">
-        <!--Graph Card-->
-        <div class="bg-gray-900 border border-gray-800 rounded shadow ">
-            <div class="border-b border-gray-800 p-3">
-                <h5 class="font-bold uppercase text-gray-600">Maximum Sustainable Yield (MSY)</h5>
-            </div>
-            <div class="p-5">
-                <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
-                <script>
-                    new Chart(document.getElementById("chartjs-7"), {
-                        "type": "bar",
-                        "data": {
-                            "labels": [{% for msy in datamsy %}'{{ msy.trip }}',{% endfor %}],
-                        "datasets": [{
-                            "label": "Yield",
-                            "data": [{% for msy in datamsy %} '{{ msy.ton }}', {% endfor %}],
-                        "borderColor": "rgb(255, 99, 132)",
-                        "backgroundColor": "rgba(255, 99, 132, 0.2)"
-                            }, {
-                            "label": "Predict Yield",
-                            "data": [{% for result in results %}'{{ result }}', {% endfor %}],
-                        "type": "line",
-                        "fill": false,
-                        "borderColor": "rgb(54, 162, 235)",
-                        "backgroundColor": "rgb(54, 162, 235)"
-                              }]
-                        },
-                        "options": {
-                        "scales": {
-                            "yAxes": [{
-                                "ticks": {
-                                    "beginAtZero": true
-                                }
-                            }]
-                        }
-                    }
-                    });
-                </script>
             </div>
         </div>
 
     </div>
-</div>
+</section>
+<section id="chart" class="bg-cream   py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12  ">
+        <!-- kotak satu  -->
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink  "
+            data-aos="fade-down-right" data-aos-duration="3000">
+            <div class=" p-3 h-full  border-l-8">
+                <div class=" my-8">
+                    <h1 class="text-darken font-semibold text-3xl leading-tight lg:pr-32"><span
+                            class="text-yellow-500">Grafik
+                            yang Jelas</span>dan Mudah di mengerti</h1>
+                    <p class="my-5 lg:pr-14 mb-32">Grafik yang rinci beserta keterangannya, yang Memberikan kejelasan
+                        serta kemudahan dalam mengakses dan meneliti data yang di butuhkan.</p>
+                    <button
+                        class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
+                        <a href="{% url 'chart' %}">
+                            Selengkapnya
+                        </a>
+                    </button>
+                </div>
 
-
-<!-- Assessments, Quizzes, Tests -->
-<div class="mt-20 mb-32 flex flex-col-reverse md:flex-row items-center md:space-x-10">
-    <div data-aos="fade-right" class="md:w-6/12 ml-12">
-        <div id="map" style="height:350px; "> <div></div></div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink "
+            data-aos="fade-down-left" data-aos-duration="3000">
+            <div class=" ">
+                <div class="bg-gray-900 border border-gray-800 rounded shadow ">
+                    <div class="border-b border-gray-800 p-3">
+                        <h5 data-aos="fade-down" data-aos-duration="3000" class="font-bold uppercase text-gray-600">
+                            Maximum Sustainable Yield (MSY)</h5>
+                    </div>
+                    <div class="p-5">
+                        <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div data-aos="fade-left" class="md:w-6/12 md:transform md:-translate-y-20 ml-12">
-        <h1 class="font-semibold text-darken text-3xl lg:pr-64">Kemudahan Mengakses <span class="text-yellow-500">Peta
-                Persebaran</span> Ikan</h1>
-        <p class="text-gray-500 my-5 lg:pr-52">Persebaran ikan yang di implementasikan menggunakan peta dan di
-            tampilkan kembali dalam website ini.</p>
-        <button
-            class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
-            <a href="{% url 'persebaran'%}">
-                Selengkapnya
-            </a>
-        </button>
-    </div>
-</div>
+</section>
 <script>
-        
+    new Chart(document.getElementById("chartjs-7"), {
+        "type": "bar",
+        "data": {
+            "labels": [{% for msy in datamsy %}'{{ msy.trip }}',{% endfor %}],
+        "datasets": [{
+            "label": "Yield",
+            "data": [{% for msy in datamsy %} '{{ msy.ton }}', {% endfor %}],
+        "borderColor": "rgb(255, 99, 132)",
+        "backgroundColor": "rgba(255, 99, 132, 0.2)"
+            }, {
+            "label": "Predict Yield",
+            "data": [{% for result in results %}'{{ result }}', {% endfor %}],
+        "type": "line",
+        "fill": false,
+        "borderColor": "rgb(54, 162, 235)",
+        "backgroundColor": "rgb(54, 162, 235)"
+              }]
+        },
+        "options": {
+        "scales": {
+            "yAxes": [{
+                "ticks": {
+                    "beginAtZero": true
+                }
+            }]
+        }
+    }
+    });
+</script>
+<section id="chart" class="bg-cream   py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12 ">
+        <!-- kotak satu  -->
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink "
+            data-aos="fade-down-left" data-aos-duration="3000">
+            <div class="">
+                <div id="map"  class="border-8" style="height: 42vh;"> </div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink  "
+            data-aos="fade-down-right" data-aos-duration="3000">
+            <div class="h-full p-3 border-r-8">
+                <div class=" mt-9">
+
+                    <h1 class="font-semibold text-darken text-3xl lg:pr-64">Kemudahan Mengakses <span
+                        class="text-yellow-500">Peta
+                        Persebaran</span> Ikan</h1>
+                        <p class="text-gray-500 my-5 lg:pr-52 mb-32">Persebaran ikan yang di implementasikan menggunakan peta dan di
+                            tampilkan kembali dalam website ini.</p>
+                            <button
+                            class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out shadow-2xl">
+                            <a href="{% url 'persebaran'%}">
+                                Selengkapnya
+                            </a>
+                        </button>
+                    </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<script>
+
     // create a map and set the view
     var map = L.map('map').setView([-6.188697, 105.827727], 9);
-    
+
     // add a tile layer to the map
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -284,16 +324,13 @@
     }
 
     // add the geojson data to the map and style it using the function
-   
+
     var baseLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
 
-   
+
 
 
 </script>
 {% endblock %}
-
-
-
