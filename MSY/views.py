@@ -140,6 +140,8 @@ def file_upload_json(request):
     for obj in uploaded_file :
         file_suhu = obj.file_suhu
         file_krolofil = obj.file_krolofil
+        name_suhu = obj.name_suhu
+        name_krolofil=obj.name_krolofil
     if request.method == 'POST':
         form = UploadFileJsonForm(request.POST, request.FILES)
         if form.is_valid():
@@ -150,7 +152,9 @@ def file_upload_json(request):
     context = {
         "form": form,
         "file_suhu": file_suhu,
-        "file_krolofil": file_krolofil
+        "file_krolofil": file_krolofil,
+        "name_suhu" : name_suhu,
+        "name_krolofil" : name_krolofil,
         }
     return render(request, 'admin/upmaps.html', context)
 
