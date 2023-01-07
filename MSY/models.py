@@ -18,15 +18,30 @@ class dataikan(models.Model):
     def CPUE (self):
         return self.ton/self.trip
     
-class UploadedFile(models.Model):
-    name = models.CharField(null=True, max_length=100)
-    file = models.FileField(upload_to='static/legenda/', validators=[FileExtensionValidator(allowed_extensions=['zip','rar'])])
+
+class UploadedFileJson(models.Model):
+    name_suhu = models.CharField(null=True, max_length=100)
+    name_krolofil = models.CharField(null=True, max_length=100)
+    file_suhu= models.FileField(upload_to='static/json/suhu/',null=True, validators=[FileExtensionValidator(allowed_extensions=['js'])])
+    file_krolofil= models.FileField(upload_to='static/json/krolofil/',null=True,validators=[FileExtensionValidator(allowed_extensions=['js'])])
     uploaded_at = models.DateTimeField(auto_now_add=True, null=True)
     
     def save(self, *args, **kwargs):
-        self.file.name = self.name
+        self.file_suhu.name = self.name_suhu
+        self.file_krolofil.name = self.name_krolofil
         super().save(*args, **kwargs)
 
+class UploadedFileLegenda(models.Model):
+    name_suhu = models.CharField(null=True, max_length=100)
+    name_krolofil = models.CharField(null=True, max_length=100)
+    file_suhu= models.FileField(upload_to='static/legenda/suhu',null=True, validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+    file_krolofil= models.FileField(upload_to='static/legenda/krolofil',null=True,validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+    uploaded_at = models.DateTimeField(auto_now_add=True, null=True)
+    
+    def save(self, *args, **kwargs):
+        self.file_suhu.name = self.name_suhu
+        self.file_krolofil.name = self.name_krolofil
+        super().save(*args, **kwargs)
 
     # def get_intercept(self):
     #     regressor = LinearRegression()

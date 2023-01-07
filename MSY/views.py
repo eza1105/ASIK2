@@ -133,28 +133,54 @@ def del_data(request,id):
     deldata.delete()
     return redirect("/task/")
 
+
 @login_required(login_url=settings.LOGIN_URL)
-def file_upload(request):
-    uploaded_file = UploadedFile.objects.all()
-    for obj in uploaded_file:
-        name = obj.name
-    nama = name
+def file_upload_json(request):
+    uploaded_file = UploadedFileJson.objects.all()
+    for obj in uploaded_file :
+        file_suhu = obj.file_suhu
+        file_krolofil = obj.file_krolofil
     if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
+        form = UploadFileJsonForm(request.POST, request.FILES)
         if form.is_valid():
-            
             form.save()
-            return redirect('upload')
+            return redirect('upload_json')
     else:
-        form = UploadFileForm()
+        form = UploadFileJsonForm()
     context = {
         "form": form,
-        "name" : nama,
-        
+        "file_suhu": file_suhu,
+        "file_krolofil": file_krolofil
         }
-    return render(request, 'admin/geojson.html',context)
+    return render(request, 'admin/upmaps.html', context)
 
-
+@login_required(login_url=settings.LOGIN_URL)
+def file_upload_legenda(request):
+    uploaded_file = UploadedFileLegenda.objects.all()
+    name_suhu = None
+    name_krolofil = None
+    file_suhu = None
+    file_krolofil = None
+    for obj in uploaded_file :
+        file_suhu = obj.file_suhu
+        file_krolofil = obj.file_krolofil
+        name_suhu = obj.name_suhu
+        name_krolofil=obj.name_krolofil
+    if request.method == 'POST':
+        form = UploadFileLegendaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('upload_legenda')
+    else:
+        form = UploadFileLegendaForm()
+    context = {
+        "form": form,
+        "name_suhu" : name_suhu,
+        "name_krolofil" : name_krolofil,
+        "file_suhu": file_suhu,
+        "file_krolofil": file_krolofil
+        }
+    return render(request, 'admin/legenda.html',context)
 
 
 # def user (request):

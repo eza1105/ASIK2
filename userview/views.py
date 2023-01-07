@@ -196,25 +196,47 @@ def send_fax (request):
         else : 
             return redirect('/adm/')
 
-def persebaran(request):
-    uploaded_file = UploadedFile.objects.all()
-    for obj in uploaded_file:
-        name = obj.name
-    nama = name
-    if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
+# def persebaran(request):
+#     uploaded_file = UploadedFile.objects.all()
+#     for obj in uploaded_file:
+#         name = obj.name
+#     nama = name
+#     if request.method == 'POST':
+#         form = UploadFileForm(request.POST, request.FILES)
+#         if form.is_valid():
             
-            form.save()
-            return redirect('persebaran')
-    else:
-        form = UploadFileForm()
-    context = {
-        "form": form,
-        "name" : nama,
+#             form.save()
+#             return redirect('persebaran')
+#     else:
+#         form = UploadFileForm()
+#     context = {
+#         "form": form,
+#         "name" : nama,
         
+#         }
+#     return render(request, 'persebaran.html',context)
+
+def persebaran(request):
+   
+    uploaded_file = UploadedFileLegenda.objects.all()
+    name_suhu_layout = None
+    name_krolofil_layout = None
+    for obj in uploaded_file :
+        file_suhu = obj.file_suhu
+        file_krolofil = obj.file_krolofil
+        name_suhu_layout = obj.name_suhu
+        name_krolofil_layout=obj.name_krolofil
+    uploaded_file = UploadedFileJson.objects.all()
+    for obj in uploaded_file :
+        file_suhu = obj.file_suhu
+        file_krolofil = obj.file_krolofil
+    context = {
+        "file_suhu": file_suhu,
+        "file_krolofil": file_krolofil,
+        "name_suhu_layout": name_suhu_layout,
+        "name_krolofil_layout":name_krolofil_layout,
         }
-    return render(request, 'persebaran.html',context)
+    return render(request, 'persebaran.html', context)
 
 # def gis(request):
 #     gis = GIS("https://www.arcgis.com", key="your_api_key")

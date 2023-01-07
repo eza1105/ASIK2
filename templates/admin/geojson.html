@@ -78,7 +78,7 @@
 
         // add the geojson data to the map and style it using the function
         var geojson1 = L.geoJSON(chlorophyll, { style: style });
-        var geojson2 = L.geoJSON(geojson, { style: style });
+        var geojson2 = L.geoJSON(temperature, { style: style });
         var group = L.layerGroup([geojson1, geojson2]);
         group.addTo(map);
         geojson1.addTo(map);

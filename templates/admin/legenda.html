@@ -1,0 +1,51 @@
+{% extends 'admin.html'%}
+{% load static %}
+{% block content%}
+<!-- create a div element for the map   -->
+<div data-aos="fade-left" data-aos-once="true" class="w-full p-10">
+    <!--Template Card-->
+    <div class="bg-gray-900 border border-gray-800 rounded shadow">
+        <div class="border-b border-gray-800 p-3">
+            <h5 class="font-bold uppercase text-white text-xl">upload Layout Maps</h5>
+        </div>
+        <div class="p-5">
+            <div class=" flex mt-5 text-white">
+               
+                <div class=" relative h-full ml-12 ">
+                    <h1 class=" uppercase font-bold"> Tata cara UPLOAD FILE<br></h1>
+                    <ol class="list-decimal mb-10">
+                        <li>masukan nama sesuai dengan nama file! nama tidak boleh ada spasi!</li>
+                        <li>akhiri nama dengan .pdf contoh (suhu.pdf)</li>
+                        <li>upload hanya menerima file java script (.pdf)</li>
+                        <!-- ... -->
+                    </ol>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class=" mt-10 inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase  rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="flex">
+    <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
+        <div>
+            <embed src="{% static 'legenda/suhu/' %}{{name_suhu}}" width="100%" height="500px" type="application/pdf">
+        </div>
+        <h1>Suhu</h1>
+        <a href="{% static 'legenda/suhu/' %}{{name_suhu}}" class=" inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase  rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out" download="{{name}}" >Download layout</a>
+    </div>
+    <div class=" mt-10 text-center text-white capitalize md:w-full mb-10">
+        <div>
+            <embed src="{% static 'legenda/krolofil/' %}{{name_krolofil}}" width="100%" height="500px" type="application/pdf">
+        </div>
+        <h1>Krolofil</h1>
+        <a href="{% static 'legenda/krolofil/' %}{{name_krolofil}}" class=" inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase  rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out" download="{{name}}" >Download layout</a>
+    </div>
+</div>
+    <!--/Template Card-->
+</div>
+
+
+{% endblock %}

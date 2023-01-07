@@ -35,12 +35,13 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(next_page ='user' ), name='logout'),
 
     # KEBUTUHAN USER 
-    path("user/",user, name='user'),
+    path("",user, name='user'),
     path("table-MSY/", table, name='table'),
     path("chart/", chart, name= 'chart'),
     path("about/", about, name='about'),
     path("fax/",send_fax, name= 'FAX'),
-    path('upload/', file_upload, name='upload'),
+    path('upload_legenda/', file_upload_legenda, name='upload_legenda'),
+    path('upload_json/', file_upload_json, name='upload_json'),
     path('persebaran/', persebaran, name='persebaran')
 ]
 

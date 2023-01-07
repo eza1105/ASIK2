@@ -15,12 +15,23 @@ class Fromdataikan(ModelForm,forms.Form):
             'ton'             : forms.NumberInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4l','required':'required'}),
         }
 
-class UploadFileForm(forms.ModelForm):
+class UploadFileJsonForm(forms.ModelForm):
     class Meta:
-        model = UploadedFile
-        fields = ['name', 'file']
+        model = UploadedFileJson
+        fields = ['name_suhu',  'file_suhu', 'name_krolofil','file_krolofil']
+
         widgets = {
-             'name' :  forms.TextInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4','required':'required'}),
+             'name_suhu' :  forms.TextInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4','required':'required'}),
+             'name_krolofil' :  forms.TextInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4','required':'required'}),
+        }
+
+class UploadFileLegendaForm(forms.ModelForm):
+    class Meta:
+        model = UploadedFileLegenda
+        fields = ['name_suhu',  'file_suhu', 'name_krolofil','file_krolofil']
+        widgets = {
+             'name_suhu' :  forms.TextInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4','required':'required'}),
+             'name_krolofil' :  forms.TextInput({'class':'border w-96 text-black border-white block mb-4 rounded-lg text-gray/30 py-2 px-4','required':'required'}),
         }
 
 

@@ -51,8 +51,8 @@
     <!-- Include GeoJSON JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/3.1.0/geojson.min.js"></script>
 
-    <script src="{% static 'json/Suhu.js' %}"> </script>
-    <script src="{% static 'json/chlorophylll.js' %}"> </script>
+    <script src="/{{ file_suhu }}"></script>
+    <script src="/{{file_krolofil }}"></script>
 
     <title>ZaVin</title>
     <link rel="stylesheet" href="{% static 'css/stylemap.css' %}">
@@ -140,10 +140,17 @@
                         </a>
                     </li>
                     <li data-aos="fade-left" data-aos-once="true" class="mr-6 my-2 md:my-0">
-                        <a href="{% url 'upload'%}"
+                        <a href="{% url 'upload_json'%}"
                             class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-100 border-b-2 border-gray-900  hover:border-green-400">
                             <i class="fas fa-map fa-fw mr-3 text-blue-400"></i><span
                                 class="pb-1 md:pb-0 text-sm">Maps</span>
+                        </a>
+                    </li>
+                    <li data-aos="fade-left" data-aos-once="true" class="mr-6 my-2 md:my-0">
+                        <a href="{% url 'upload_legenda'%}"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-100 border-b-2 border-gray-900  hover:border-green-400">
+                            <i class="fas fa-map fa-fw mr-3 text-blue-400"></i><span
+                                class="pb-1 md:pb-0 text-sm">Legenda</span>
                         </a>
                     </li>
                     <li data-aos="fade-right" data-aos-once="true" class="mr-6 my-2 md:my-0">
