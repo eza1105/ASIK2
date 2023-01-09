@@ -42,12 +42,3 @@ class UploadedFileLegenda(models.Model):
         self.file_suhu.name = self.name_suhu
         self.file_krolofil.name = self.name_krolofil
         super().save(*args, **kwargs)
-
-    # def get_intercept(self):
-    #     regressor = LinearRegression()
-    #     X = dataikan.objects.all().values_list('ton', flat=True).order_by('ton').annotate(CPUE=F('ton')/F('trip')).values('ton').annotate(CPUE=F('CPUE')).values_list('ton', 'CPUE')
-    #     Y = dataikan.objects.all().values_list('ton', flat=True).order_by('ton').annotate(CPUE=F('ton')/F('trip')).values('CPUE').annotate(ton=F('ton')).values_list('ton', 'CPUE')
-    #     X = np.array(X).reshape(-1, 1)
-    #     Y = np.array(Y).reshape(-1, 1)
-    #     regressor.fit(X, Y)
-    #     return regressor.intercept_

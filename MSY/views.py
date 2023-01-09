@@ -161,15 +161,11 @@ def file_upload_json(request):
 @login_required(login_url=settings.LOGIN_URL)
 def file_upload_legenda(request):
     uploaded_file = UploadedFileLegenda.objects.all()
-    name_suhu = None
-    name_krolofil = None
-    file_suhu = None
-    file_krolofil = None
     for obj in uploaded_file :
-        file_suhu = obj.file_suhu
-        file_krolofil = obj.file_krolofil
-        name_suhu = obj.name_suhu
-        name_krolofil=obj.name_krolofil
+        nama_suhu = obj.name_suhu
+        nama_krolofil=obj.name_krolofil
+    name_suhu = nama_suhu
+    name_krolofil =  nama_krolofil
     if request.method == 'POST':
         form = UploadFileLegendaForm(request.POST, request.FILES)
         if form.is_valid():
@@ -181,8 +177,6 @@ def file_upload_legenda(request):
         "form": form,
         "name_suhu" : name_suhu,
         "name_krolofil" : name_krolofil,
-        "file_suhu": file_suhu,
-        "file_krolofil": file_krolofil
         }
     return render(request, 'admin/legenda.html',context)
 
