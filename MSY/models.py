@@ -36,9 +36,13 @@ class UploadedFileLegenda(models.Model):
     name_krolofil = models.CharField(null=True, max_length=100)
     file_suhu= models.FileField(upload_to='static/legenda/suhu',null=True, validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
     file_krolofil= models.FileField(upload_to='static/legenda/krolofil',null=True,validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
-    uploaded_at = models.DateTimeField(auto_now_add=True, null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True, null=True) 
     
     def save(self, *args, **kwargs):
+        if self.name_suhu and not self.name_suhu.endswith('.pdf'):
+            self.name_suhu += '.pdf'
+        if self.name_krolofil and not self.name_krolofil.endswith('.pdf'):
+            self.name_krolofil += '.pdf'
         self.file_suhu.name = self.name_suhu
         self.file_krolofil.name = self.name_krolofil
         super().save(*args, **kwargs)
