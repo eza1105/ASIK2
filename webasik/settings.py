@@ -107,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
+STATICFILES_FINDERS = [    'django.contrib.staticfiles.finders.FileSystemFinder',    'django.contrib.staticfiles.finders.AppDirectoriesFinder',]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
